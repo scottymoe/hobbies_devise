@@ -1,0 +1,21 @@
+<h1>Slopes#new</h1>
+<%= form_with(model: @slope, local: true) do |f| %>
+<div class='field'>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, placeholder: "Name" %>
+</div>
+
+<div class='field'>
+  <%= f.label :difficulty %>
+  <%= f.text_field :difficulty, required: true, placeholder: "Difficulty" %>
+</div>
+
+<div class='field'>
+  <%= f.label :length %>
+  <%= f.number_field :length, required: true %>
+</div>
+<%= f.submit %>
+<% end %>
+
+
+

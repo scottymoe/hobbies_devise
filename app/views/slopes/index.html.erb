@@ -1,0 +1,9 @@
+<h1>Slopes#index</h1>
+<p>Welcome <%= @current_user.first_name %> <p>
+<%= link_to "Add Slope", new_slope_path %>
+<ul>
+  <% @slopes.each do |slope| %>
+    <li><%= slope.info %></li>
+  <% end %>
+</ul>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
